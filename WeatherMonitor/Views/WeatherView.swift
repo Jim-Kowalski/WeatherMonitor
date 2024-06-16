@@ -18,8 +18,7 @@ struct WeatherView: View {
             {
                 if let daily = viewModel.weatherData?.daily
                 {
-                    Text("Coming soon: Select different cities!")
-                        .bold()
+
                         
                     //Iterate throught each time item in the WeatherModel & populate a list with each day's
                     //weather forecast for the week.
@@ -36,7 +35,14 @@ struct WeatherView: View {
                         }
                         
                     }
-                    
+                    HStack{
+                        Spacer()
+                        Text("Coming soon: Select different cities!")
+                            .foregroundColor(.red)
+                            .font(.system(size: 18))
+                        Spacer()
+
+                    }
                 }
             }
             .onAppear
@@ -63,7 +69,7 @@ struct WeatherView: View {
                             .bold()
                         
                     }
-                    .padding(.top)
+                    
                     
                 }
                 
