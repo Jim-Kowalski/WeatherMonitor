@@ -11,6 +11,11 @@
 		B10A22B32C1E623B00099070 /* PasswordFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22B22C1E623B00099070 /* PasswordFieldView.swift */; };
 		B10A22B52C1E62F900099070 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22B42C1E62F900099070 /* AccountViewModel.swift */; };
 		B10A22B72C1E711900099070 /* WeatherMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22B62C1E711900099070 /* WeatherMonitorView.swift */; };
+		B10A22BB2C30ABA200099070 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22BA2C30ABA200099070 /* BackgroundView.swift */; };
+		B10A22BD2C30AD4900099070 /* CitySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22BC2C30AD4900099070 /* CitySearchView.swift */; };
+		B10A22BF2C30B0FA00099070 /* CitySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22BE2C30B0FA00099070 /* CitySearchViewModel.swift */; };
+		B10A22C12C30BEDE00099070 /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10A22C02C30BEDE00099070 /* CityModel.swift */; };
+		B11252912C3116080083C30D /* CityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11252902C3116080083C30D /* CityListView.swift */; };
 		B1FF07AB2C1E247300F4DC5B /* WeatherMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FF07AA2C1E247300F4DC5B /* WeatherMonitorApp.swift */; };
 		B1FF07AF2C1E247300F4DC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FF07AE2C1E247300F4DC5B /* Assets.xcassets */; };
 		B1FF07B22C1E247300F4DC5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1FF07B12C1E247300F4DC5B /* Preview Assets.xcassets */; };
@@ -56,6 +61,11 @@
 		B1FF080D2C1E32E700F4DC5B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B1FF080C2C1E32E700F4DC5B /* FirebaseStorage */; };
 		B1FF080F2C1E32E700F4DC5B /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B1FF080E2C1E32E700F4DC5B /* FirebaseStorageCombine-Community */; };
 		B1FF08112C1E32E700F4DC5B /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = B1FF08102C1E32E700F4DC5B /* FirebaseVertexAI-Preview */; };
+		B1FFAD572C39098B006B0BC2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = B1FFAD562C39098B006B0BC2 /* GoogleSignIn */; };
+		B1FFAD592C39098B006B0BC2 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1FFAD582C39098B006B0BC2 /* GoogleSignInSwift */; };
+		B1FFAD5D2C398342006B0BC2 /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFAD5C2C398342006B0BC2 /* CurrentWeatherModel.swift */; };
+		B1FFAD5F2C39EA16006B0BC2 /* SunMaxImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFAD5E2C39EA16006B0BC2 /* SunMaxImageView.swift */; };
+		B1FFAD612C39EBB5006B0BC2 /* CloudRainImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FFAD602C39EBB5006B0BC2 /* CloudRainImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +73,11 @@
 		B10A22B22C1E623B00099070 /* PasswordFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldView.swift; sourceTree = "<group>"; };
 		B10A22B42C1E62F900099070 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		B10A22B62C1E711900099070 /* WeatherMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMonitorView.swift; sourceTree = "<group>"; };
+		B10A22BA2C30ABA200099070 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		B10A22BC2C30AD4900099070 /* CitySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchView.swift; sourceTree = "<group>"; };
+		B10A22BE2C30B0FA00099070 /* CitySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewModel.swift; sourceTree = "<group>"; };
+		B10A22C02C30BEDE00099070 /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		B11252902C3116080083C30D /* CityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListView.swift; sourceTree = "<group>"; };
 		B1FF07A72C1E247300F4DC5B /* WeatherMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1FF07AA2C1E247300F4DC5B /* WeatherMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMonitorApp.swift; sourceTree = "<group>"; };
 		B1FF07AE2C1E247300F4DC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +91,9 @@
 		B1FF07C72C1E28CF00F4DC5B /* WeatherViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		B1FF07CB2C1E2CB900F4DC5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B1FF07D82C1E2FCE00F4DC5B /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		B1FFAD5C2C398342006B0BC2 /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		B1FFAD5E2C39EA16006B0BC2 /* SunMaxImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunMaxImageView.swift; sourceTree = "<group>"; };
+		B1FFAD602C39EBB5006B0BC2 /* CloudRainImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRainImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +110,7 @@
 				B1FF07DB2C1E32E700F4DC5B /* FirebaseAnalytics in Frameworks */,
 				B1FF07EB2C1E32E700F4DC5B /* FirebaseCrashlytics in Frameworks */,
 				B1FF07F32C1E32E700F4DC5B /* FirebaseFirestore in Frameworks */,
+				B1FFAD572C39098B006B0BC2 /* GoogleSignIn in Frameworks */,
 				B1FF08112C1E32E700F4DC5B /* FirebaseVertexAI-Preview in Frameworks */,
 				B1FF07F12C1E32E700F4DC5B /* FirebaseDynamicLinks in Frameworks */,
 				B1FF080F2C1E32E700F4DC5B /* FirebaseStorageCombine-Community in Frameworks */,
@@ -112,6 +131,7 @@
 				B1FF08012C1E32E700F4DC5B /* FirebaseInstallations in Frameworks */,
 				B1FF07F72C1E32E700F4DC5B /* FirebaseFirestoreSwift in Frameworks */,
 				B1FF07E12C1E32E700F4DC5B /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				B1FFAD592C39098B006B0BC2 /* GoogleSignInSwift in Frameworks */,
 				B1FF07E32C1E32E700F4DC5B /* FirebaseAppCheck in Frameworks */,
 				B1FF080B2C1E32E700F4DC5B /* FirebaseRemoteConfigSwift in Frameworks */,
 				B1FF07E52C1E32E700F4DC5B /* FirebaseAppDistribution-Beta in Frameworks */,
@@ -164,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				B10A22B42C1E62F900099070 /* AccountViewModel.swift */,
+				B10A22BE2C30B0FA00099070 /* CitySearchViewModel.swift */,
 				B1FF07C72C1E28CF00F4DC5B /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
@@ -172,13 +193,18 @@
 		B1FF07B92C1E277500F4DC5B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B1FF07C12C1E28BC00F4DC5B /* DayOfWeekView.swift */,
-				B1FF07C22C1E28BC00F4DC5B /* HourlyWeatherView.swift */,
-				B1FF07C32C1E28BC00F4DC5B /* WeatherView.swift */,
 				B1FF07D82C1E2FCE00F4DC5B /* AccountView.swift */,
+				B10A22BA2C30ABA200099070 /* BackgroundView.swift */,
+				B10A22BC2C30AD4900099070 /* CitySearchView.swift */,
+				B11252902C3116080083C30D /* CityListView.swift */,
+				B1FFAD602C39EBB5006B0BC2 /* CloudRainImageView.swift */,
+				B1FF07C12C1E28BC00F4DC5B /* DayOfWeekView.swift */,
 				B10A22B02C1E616500099070 /* EmailFieldView.swift */,
+				B1FF07C22C1E28BC00F4DC5B /* HourlyWeatherView.swift */,
 				B10A22B22C1E623B00099070 /* PasswordFieldView.swift */,
+				B1FFAD5E2C39EA16006B0BC2 /* SunMaxImageView.swift */,
 				B10A22B62C1E711900099070 /* WeatherMonitorView.swift */,
+				B1FF07C32C1E28BC00F4DC5B /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +212,8 @@
 		B1FF07BA2C1E279500F4DC5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B10A22C02C30BEDE00099070 /* CityModel.swift */,
+				B1FFAD5C2C398342006B0BC2 /* CurrentWeatherModel.swift */,
 				B1FF07BC2C1E28A400F4DC5B /* DailyWeatherModel.swift */,
 				B1FF07BB2C1E28A400F4DC5B /* HoulyWeatherModel.swift */,
 				B1FF07BD2C1E28A400F4DC5B /* WeatherModel.swift */,
@@ -243,6 +271,8 @@
 				B1FF080C2C1E32E700F4DC5B /* FirebaseStorage */,
 				B1FF080E2C1E32E700F4DC5B /* FirebaseStorageCombine-Community */,
 				B1FF08102C1E32E700F4DC5B /* FirebaseVertexAI-Preview */,
+				B1FFAD562C39098B006B0BC2 /* GoogleSignIn */,
+				B1FFAD582C39098B006B0BC2 /* GoogleSignInSwift */,
 			);
 			productName = WeatherMonitor;
 			productReference = B1FF07A72C1E247300F4DC5B /* WeatherMonitor.app */;
@@ -274,6 +304,7 @@
 			mainGroup = B1FF079E2C1E247300F4DC5B;
 			packageReferences = (
 				B1FF07CD2C1E2EFD00F4DC5B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B1FFAD552C39098B006B0BC2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = B1FF07A82C1E247300F4DC5B /* Products */;
 			projectDirPath = "";
@@ -302,19 +333,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10A22BB2C30ABA200099070 /* BackgroundView.swift in Sources */,
+				B10A22C12C30BEDE00099070 /* CityModel.swift in Sources */,
 				B10A22B32C1E623B00099070 /* PasswordFieldView.swift in Sources */,
 				B10A22B12C1E616500099070 /* EmailFieldView.swift in Sources */,
 				B1FF07C82C1E28CF00F4DC5B /* WeatherViewModel.swift in Sources */,
 				B1FF07AB2C1E247300F4DC5B /* WeatherMonitorApp.swift in Sources */,
 				B1FF07BF2C1E28A400F4DC5B /* DailyWeatherModel.swift in Sources */,
 				B1FF07D92C1E2FCE00F4DC5B /* AccountView.swift in Sources */,
+				B1FFAD612C39EBB5006B0BC2 /* CloudRainImageView.swift in Sources */,
 				B1FF07BE2C1E28A400F4DC5B /* HoulyWeatherModel.swift in Sources */,
 				B1FF07C42C1E28BC00F4DC5B /* DayOfWeekView.swift in Sources */,
+				B10A22BD2C30AD4900099070 /* CitySearchView.swift in Sources */,
 				B1FF07C02C1E28A400F4DC5B /* WeatherModel.swift in Sources */,
 				B10A22B72C1E711900099070 /* WeatherMonitorView.swift in Sources */,
+				B1FFAD5D2C398342006B0BC2 /* CurrentWeatherModel.swift in Sources */,
+				B1FFAD5F2C39EA16006B0BC2 /* SunMaxImageView.swift in Sources */,
 				B1FF07C52C1E28BC00F4DC5B /* HourlyWeatherView.swift in Sources */,
 				B10A22B52C1E62F900099070 /* AccountViewModel.swift in Sources */,
+				B11252912C3116080083C30D /* CityListView.swift in Sources */,
 				B1FF07C62C1E28BC00F4DC5B /* WeatherView.swift in Sources */,
+				B10A22BF2C30B0FA00099070 /* CitySearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +567,14 @@
 				minimumVersion = 10.27.0;
 			};
 		};
+		B1FFAD552C39098B006B0BC2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -695,6 +742,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B1FF07CD2C1E2EFD00F4DC5B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseVertexAI-Preview";
+		};
+		B1FFAD562C39098B006B0BC2 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1FFAD552C39098B006B0BC2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		B1FFAD582C39098B006B0BC2 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1FFAD552C39098B006B0BC2 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

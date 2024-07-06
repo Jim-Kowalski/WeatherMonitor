@@ -12,4 +12,6 @@ struct DailyWeatherModel: Codable {
     let temperature_2m_max: [Double]
     let temperature_2m_min: [Double]
     let precipitation_probability_max: [Int]
+    let sunrise: [String]
+    let sunset: [String]
 }

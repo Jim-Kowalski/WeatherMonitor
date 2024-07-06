@@ -12,12 +12,11 @@ struct AccountView: View {
     @ObservedObject var accountViewModel: AccountViewModel //Contains the ViewModel logic for the AccountView
     
     var body: some View {
+
         ZStack{
-            
             //Gradient background
             BackgroundView()
             VStack{
-                
                 //Weather Monitor title
                 HStack{
                     Text ("Weather Monitor")
@@ -26,13 +25,11 @@ struct AccountView: View {
                         .bold()
                 }
                 .padding(.top) //Pad the top of the view to get it off the notch
-                
                 Image(systemName: "cloud.sun.fill")
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 200)
-                
                 
                 //Email field
                 EmailFieldView(isEmailFieldFocused: $isEmailFieldFocused, email: $accountViewModel.email)
@@ -105,18 +102,5 @@ struct AccountView: View {
         }
 
 
-    }
-}
-
-
-
-
-
-struct BackgroundView: View {
-    var body: some View {
-        LinearGradient(gradient: Gradient(colors: [.blue,  Color("lightBlue")]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }

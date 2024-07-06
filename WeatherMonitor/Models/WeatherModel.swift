@@ -14,10 +14,18 @@ struct WeatherModel: Codable {
     let timezone: String
     let timezone_abbreviation: String
     let elevation: Double
+    let current_units: CurrentWeatherUnits
+    let current: CurrentWeatherModel
     let hourly_units: HourlyUnits
     let hourly: HourlyWeatherModel
     let daily_units: DailyUnits
     let daily: DailyWeatherModel
+}
+struct CurrentWeatherUnits: Codable
+{
+    let time: String
+    let interval: String
+    let temperature_2m: String
 }
 
 struct HourlyUnits: Codable {

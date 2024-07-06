@@ -12,12 +12,26 @@ enum accountViewMode
     case logIn
 }
 class AccountViewModel: ObservableObject {
+    @Published var accountView: accountViewMode = .createAccount //Specifies the view mode for the AccountView
+    @Published var authError: String? //Contains authentication error's localized error string
     @Published var email: String = "" //Specifies the variable used to store the email (bound to the EmailFieldView)
     @Published var password: String = "" //Specifies the variable used to store the password (bound to the PasswordFieldView)
-    @AppStorage("uid") var userID: String = "" //Contains the userID
-    @Published var authError: String? //Contains authentication error's localized error string
-    @Published var accountView: accountViewMode = .createAccount //Specifies the view mode for the AccountView
 
+    @AppStorage("uid") var userID: String = "" //Contains the userID
+    @AppStorage("latitude") var latitude: Double = 33.1857 //Specifies the latitude of the city the end user sleected
+    @AppStorage("longitude") var longitude: Double = -87.2647 //Specifies the longitude of the city the end user sleected
+    @AppStorage("city") var cityName: String = "Birmingham" // Specifies the city's name
+    @AppStorage("state") var stateName: String = "Alabama" // Specifies the state's name
+
+    
+    //This function updates the city selection for the AccountViewModel
+    func updateSelectedCity(newCityName: String, newStateName: String, newLatitude: Double, newLongitude: Double)
+    {
+        self.cityName = newCityName
+        self.stateName = newStateName
+        self.latitude = newLatitude
+        self.longitude = newLongitude
+    }
     
     //This funcion attempts to create a new account.
     func createAccount() {
@@ -70,7 +84,7 @@ class AccountViewModel: ObservableObject {
     }
     
     private func navigateToWeatherView() {
-        WeatherView()
+        WeatherView(accountViewModel: self)
     }
 }
 

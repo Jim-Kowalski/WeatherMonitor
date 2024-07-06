@@ -18,15 +18,15 @@ class WeatherViewModel: ObservableObject {
     @Published var error: Error? //Contains the error object that occurred
     @Published var hasError: Bool = false //Indicates an error has occurred
     @Published var weatherData: WeatherModel? //Specifies the raw response
-    
+    @Published var lastFetch: Date? //Specifies the last time weather data was fetched.
     //Specifies the url for the web API. Note: we're using fixed coordinates for Birmingham, AL
-    private let url = "https://api.open-meteo.com/v1/forecast?latitude=33.1857&longitude=-87.2647&hourly=temperature_2m,precipitation_probability,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FChicago"
     
     @MainActor
-    func fetchData() async {
-        
+    func fetchData(latitude: Double, longitude: Double) async {
+        let urlString = "https://api.open-meteo.com/v1/forecast?latitude=\(latitude)&longitude=\(longitude)&current=temperature_2m,relative_humidity_2m,rain,showers,snowfall,cloud_cover,wind_speed_10m&hourly=temperature_2m,precipitation_probability,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch&timezone=America%2FChicago"
+        //var urlString = " https://api.open-meteo.com/v1/forecast?latitude=\(latitude)&longitude=\(longitude)&current=temperature_2m&hourly=temperature_2m,relative_humidity_2m,dew_point_2m,precipitation_probability,cloud_cover,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch"
         //convert the url string to a URL object
-        if let url = URL(string: self.url) {
+        if let url = URL(string: urlString) {
             do {
                 
                 //get the data from the open-mateo weather application asynchronously. This
@@ -41,6 +41,9 @@ class WeatherViewModel: ObservableObject {
                     self.error = WeatherModelError.decodeError
                     return
                 }
+                
+                lastFetch=Date() //Set the timestamp of the last fetched data to display in the UI
+                
                 //If no errors are encountered in the JSON code, the instance variable for the class
                 //will be assigned the decoded JSON.
                 self.weatherData = results
@@ -52,7 +55,81 @@ class WeatherViewModel: ObservableObject {
             }
         }
     }
+    func getTimestamp() -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        let dateString = formatter.string(from: Date())
+        return dateString
+    }
+    func getCurrentWeatherTempAndHumidityString()-> String?
+    {
+        let strTemp: String = "Temp: \( Int(weatherData?.current.temperature_2m ?? -1) >= 0 ? "\(Int((weatherData?.current.temperature_2m)!)) F" : "??" )"
+        let strHumidityString: String = "Humidty: \(Int(weatherData?.current.relative_humidity_2m ?? -1) >= 0 ? "\(Int((weatherData?.current.relative_humidity_2m)!)) %" : "??" )"
+        return "\(strTemp)   \(strHumidityString)"
+    }
+    func getCurrentCloudCoverString() -> String?
+    {
+        var currentCloudCoverString: String = "Sunny"
+        let currentCloudCover = (Int(weatherData?.current.cloud_cover ?? -1))
+        if currentCloudCover >= 0 && currentCloudCover < 20
+        {
+            currentCloudCoverString = "Sunny"
+        } else if currentCloudCover >= 20 && currentCloudCover < 50
+        {
+            currentCloudCoverString = "Partly Cloudy"
+        }else if currentCloudCover >= 50 && currentCloudCover < 80
+        {
+            currentCloudCoverString = "Mostly Cloudy"
+        }else if currentCloudCover >= 80
+        {
+            currentCloudCoverString = "Overcast"
+        }
+        return "\(currentCloudCoverString)"
+    }
+    func getCurrentWindSpeedString() -> String?
+    {
+        let currentWindSpeed = (Int(weatherData?.current.wind_speed_10m ?? -1))
+        let currentWindSpeedString = "Wind Speed: \(currentWindSpeed) mph"
+        return currentWindSpeedString
+    }
+    func getCurrentWeatherImage() -> String
+    {
+        let currentCloudCover = (Int(weatherData?.current.cloud_cover ?? -1))
+        let currentShowers = (Int(weatherData?.current.showers ?? -1))
+        let currentRain = (Int(weatherData?.current.rain ?? -1))
+        let currentSnowFall = (Int(weatherData?.current.snowfall ?? -1))
+        var imageName: String = "questionmark"
+        
+        if currentCloudCover >= 0 && currentCloudCover < 20
+        {
+            imageName = "sun.max"
+        }
+        else if currentCloudCover >= 20 && currentCloudCover < 80
+        {
+            imageName = "cloud.sun"
+        }
+        else if currentCloudCover >= 80
+        {
+            imageName = "cloud"
+        }
+        if currentShowers > 0
+        {
+            imageName = "cloud.heavyrain"
+            
+        }
+        else if currentRain > 0
+        {
+            imageName = "cloud.rain"
+        }
+        else if currentSnowFall > 0
+        {
+            imageName = "cloud.snow"
+        }
+        return imageName
+        
+    }
 }
+
 
 
 //This function converts the dateString into a day like Monday, Tuesday,
